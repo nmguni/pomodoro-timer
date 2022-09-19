@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+
    <title>Document</title>
-   
 </head>
+
 <body>
    <div class="settings">
-      <button class="settings__modal">x</button>
+      <button class="open">open</button>
    </div>
 
+   <!-- modal nav -->
    <div id="myModal" class="modal">
-      <!-- Modal content -->
       <div class="modal-content">
-        <span class="close_modal">&times;</span>
-        <p>Some text in the Modal..</p>
+         <button class="close_modal">close</button>
+         <ul class="tabs">
+            <li  data-tab-target="#timer" class="active tab">Timer</li>
+            <li  data-tab-target="#options" class="tab">Options</li>
+            <li  data-tab-target="#about" class="tab">about</li>
+            <li  data-tab-target="#notifications" class="tab">Notifications</li>
+         </ul>
+
+<div class="tab-content">
+   <div id="timer" data-tab-content class="active">
+      <h1>Timer</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit placeat ipsum expedita cumque tempora numquam harum ad ex. Enim.</p>
+   </div>
+   <div id="options" data-tab-content>
+      <h1>options</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit placeat ipsum expedita cumque tempora numquam harum ad ex. Enim.</p>
+   </div>
+   <div id="about" data-tab-content>
+      <h1>about</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit placeat ipsum expedita cumque tempora numquam harum ad ex. Enim.</p>
+   </div>
+   <div id="notifications" data-tab-content>
+      <h1>notifications</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit placeat ipsum expedita cumque tempora numquam harum ad ex. Enim.</p>
+   </div>
+</div>
+   </div>
+   </div>
+
+   <div class="pomo">
+      <div class="progress">
+         <div class="progress__bar"></div>
       </div>
-    
-    </div>
-   
-    <div class="pomo">
-      <div class="progress"><div class="progress__bar"></div></div>
       <div class="controls__top">
          <button class="pomadoro__start">pomodoro</button>
          <button class="short__break">short break</button>
@@ -33,10 +59,11 @@
       <div class="pomo__clock"><span class="time">25:00</span></div>
       <div class="controls__bot">
          <button id="btn__start">start</button>
-         <button id="btn__stop">stop</button> 
+         <button id="btn__stop">stop</button>
          <button id="btn__reset">reset</button>
       </div>
       <script src="index.js"></script>
    </div>
 </body>
+
 </html>
